@@ -1,0 +1,29 @@
+.form-cont {
+    background-color: $white;
+    @include flexDirection(row);
+    width: 60%;
+    height: 60vh; 
+    margin: 5rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    form {
+        width: 50%;
+        @include flexDirection(column);
+        justify-content: space-between;
+
+        .bill {
+            @include flexDirection(column);
+
+            input {
+                background-color: $ligt-gray-cyan;
+                height: 3rem;
+                font-size: 2.2rem;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                color: $dark-gray-cyan;
+            }
+        }
+    }
+}

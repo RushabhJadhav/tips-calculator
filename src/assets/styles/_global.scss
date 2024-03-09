@@ -1,5 +1,15 @@
 $background-color: hsl(185, 41%, 84%);
+$strong-cyan: hsl(172, 67%, 45%);
+$gray-cyan: hsl(184, 14%, 56%);
+$ligt-gray-cyan: hsl(189, 41%, 97%);
+$dark-gray-cyan: hsl(186, 14%, 43%);
+$darker-gray-cyan: hsl(183, 100%, 15%);
 $white: hsl(0, 0%, 100%);
+
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
 
 * {
   box-sizing: border-box;
@@ -11,4 +21,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $background-color;
+}
+input[type=number] {
+  text-align: right;
+
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
 }
