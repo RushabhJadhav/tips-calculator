@@ -1,7 +1,7 @@
 import { useState, createContext } from "react";
 import Form from "./components/Form";
 
-const UserContext = createContext();
+export const UserContext = createContext();
 
 function App() {
 
