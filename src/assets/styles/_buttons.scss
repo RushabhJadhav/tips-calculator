@@ -2,7 +2,9 @@ ul {
     list-style-type: none;
     @include flexDirection(row);
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 1rem;
+    margin-top: .5rem;
 
     li {
         width: 30%;
@@ -21,7 +23,20 @@ ul {
             border-radius: 5px;
 
             &[type=number] {
-                text-align: center;
+                text-align: right;
+                padding-right: 0.7rem;
+                background-color: $ligt-gray-cyan;
+                color: $dark-gray-cyan;
+
+                &:hover {
+                    background-color: $ligt-gray-cyan;
+                    outline: 3px solid $strong-cyan;
+                }
+            }
+
+            &:hover {
+                background-color: $strong-cyan;
+                color: $darker-gray-cyan;
             }
         }
     }

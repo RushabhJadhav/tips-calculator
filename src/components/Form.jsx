@@ -9,7 +9,7 @@ const Form = () => {
                     <label>Bill</label>
                     <input type="number" />
                 </div>
-                <div>
+                <div className="btn-cont">
                     <label>Select Tip %</label>
                     <Buttons />
                 </div>

@@ -1,0 +1,47 @@
+.calculations {
+    width: 50%;
+    background-color: $darker-gray-cyan;
+    border-radius: 1rem;
+    padding: 3rem;
+    @include flexDirection(column);
+    justify-content: space-between;
+
+    .amount-parent {
+
+        .amount-cont {
+            @include flexDirection(row);
+            justify-content: space-between;
+            margin-bottom: 2rem;
+
+            .amount-label {
+
+                p:first-of-type {
+                    color: $white;
+                    margin-bottom: .5rem;
+                }
+
+                P:last-child {
+                    color: $ligt-gray-cyan;
+                }
+            }
+    
+            .amount {
+                color: $strong-cyan;
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+        }
+
+    }
+
+    #reset {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        background-color: $strong-cyan;
+        color: $darker-gray-cyan;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+}
