@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../App"
+import { UserContext } from "../App";
 import Buttons from "./Buttons";
 import Calculations from "./Calculations";
 
@@ -14,8 +14,6 @@ const Form = () => {
     const handlePeopleNumber = (e) => {
         setPeople(e.target.value)
     }
-
-    console.log(bill)
 
     return (
         <div className="form-cont">

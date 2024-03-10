@@ -1,4 +1,14 @@
+import { useContext } from "react";
+import { UserContext } from "../App";
+
+
 const Buttons = () => {
+    const [setTip] = useContext(UserContext)
+
+    const handleCustom = (e) => {
+        setTip(e.target.value)
+    }
+
     return (
         <ul>
             <li>
@@ -17,7 +27,7 @@ const Buttons = () => {
                 <input type="button" value="50%" />
             </li>
             <li>
-                <input type="number" placeholder="custom" />
+                <input type="number" placeholder="custom" onChange={handleCustom} />
             </li>
         </ul>
     )
