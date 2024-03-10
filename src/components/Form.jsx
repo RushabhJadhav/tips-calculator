@@ -5,14 +5,16 @@ import Calculations from "./Calculations";
 
 const Form = () => {
 
-    const {bill, setBill, people, setPeople} = useContext(UserContext);
+    const {bill, setBill, people, setPeople, total, setTotal} = useContext(UserContext);
 
     const handleBillAmount = (e) => {
         setBill(e.target.value)
+        setTotal(e.target.value)
     }
 
     const handlePeopleNumber = (e) => {
-        setPeople(e.target.value)
+        let numOfPeople = e.target.value;
+        setPeople(numOfPeople)
     }
 
     return (

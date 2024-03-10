@@ -3,31 +3,40 @@ import { UserContext } from "../App";
 
 
 const Buttons = () => {
-    const [setTip] = useContext(UserContext)
+    const {setTip, bill, total, setTotal} = useContext(UserContext)
 
-    const handleCustom = (e) => {
-        setTip(e.target.value)
+    const handleTips = (e) => {
+        let tipNum = parseFloat(e.target.value)
+        let perTip = (tipNum * bill) / 100;
+        setTip(perTip)
+    }
+
+    const handleCustomTips = (e) => {
+        // let customTip = e.target.value;
+        // if(typeof(customTip) === 'string') {
+        //     setTip(0)
+        // }
     }
 
     return (
         <ul>
             <li>
-                <input type="button" value="5%" />
+                <input type="button" value="5%" onClick={handleTips} />
             </li>
             <li>
-                <input type="button" value="10%" />
+                <input type="button" value="10%" onClick={handleTips} />
             </li>
             <li>
-                <input type="button" value="15%" />
+                <input type="button" value="15%" onClick={handleTips} />
             </li>
             <li>
-                <input type="button" value="25%" />
+                <input type="button" value="25%" onClick={handleTips} />
             </li>
             <li>
-                <input type="button" value="50%" />
+                <input type="button" value="50%" onClick={handleTips} />
             </li>
             <li>
-                <input type="number" placeholder="custom" onChange={handleCustom} />
+                <input type="number" placeholder="custom" onChange={handleCustomTips} />
             </li>
         </ul>
     )

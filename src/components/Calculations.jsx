@@ -19,14 +19,14 @@ const Calculations = () => {
                         <p>Tip Amount</p>
                         <p>/ person</p>
                     </span>
-                    <span className="amount">{tip.toFixed(2)}</span>
+                    <span className="amount">{tip}</span>
                 </div>
                 <div className="amount-cont">
                     <span className="amount-label">
                         <p>Total</p>
                         <p>/ person</p>
                     </span>
-                    <span className="amount">{total.toFixed(2)}</span>
+                    <span className="amount">{total}</span>
                 </div>
             </div>
             <button id="reset" onClick={handleReset}>RESET</button>
