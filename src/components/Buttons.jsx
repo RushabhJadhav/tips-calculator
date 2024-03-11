@@ -9,13 +9,17 @@ const Buttons = () => {
         let tipNum = parseFloat(e.target.value)
         let perTip = (tipNum * bill) / 100;
         setTip(perTip)
+        setTotal(parseFloat(bill) + perTip)
     }
 
     const handleCustomTips = (e) => {
-        // let customTip = e.target.value;
-        // if(typeof(customTip) === 'string') {
-        //     setTip(0)
-        // }
+        let customTip = parseFloat(e.target.value);
+        if(customTip > 0 && customTip < 100) {
+            setTip(customTip)
+            setTotal(parseFloat(bill) + customTip)
+        } else {
+            alert("This number cannot be greater than 100 or smaller than 0")
+        }
     }
 
     return (
