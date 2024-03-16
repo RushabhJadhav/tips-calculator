@@ -26,7 +26,7 @@ const Calculations = () => {
                         <p>Total</p>
                         <p>/ person</p>
                     </span>
-                    <span className="amount">{total}</span>
+                    <span className="amount">{total == '' ? 0 : total}</span>
                 </div>
             </div>
             <button id="reset" onClick={handleReset}>RESET</button>

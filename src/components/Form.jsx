@@ -8,8 +8,11 @@ const Form = () => {
     const {bill, setBill, people, setPeople, total, setTotal, totalTip, setTotalTip} = useContext(UserContext);
 
     const handleBillAmount = (e) => {
-        setBill(e.target.value)
-        setTotal(e.target.value)
+        let inputVal = e.target.value;
+        if(inputVal >= 0) {
+            setBill(inputVal)
+            setTotal(inputVal)
+        }
     }
 
     const handlePeopleNumber = (e) => {
